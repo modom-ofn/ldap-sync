@@ -26,7 +26,7 @@
   Sync AuthPortal's authorized media users into LDAP so legacy services (Grafana, Jenkins, whatever) can reuse the same access decisions.
 
 - **Multi-provider aware**  
-  Ships the full identities matrix (Plex, Jellyfin, Emby) right into LDAP `description` attributes for cross-reference. Works with every AuthPortal `v2.0.x` release, including the latest [v2.0.3](https://github.com/modom-ofn/auth-portal/releases/tag/v2.0.3).
+  Ships the full identities matrix (Plex, Jellyfin, Emby) right into LDAP `description` attributes for cross-reference. Works with every AuthPortal `v2.0.x` release, including the latest [v2.0.3](https://github.com/modom-ofn/auth-portal/).
 
 - **Zero-click OU bootstrap**  
   Creates the target OU branch at startup if it is missing, so fresh installs do not require manual LDIF prep.
@@ -67,7 +67,7 @@ Add your own scheduler (cron, k8s job, GitHub Actions, etc.) to run the binary a
 
 ```bash
 # build the container
-docker build -t modomofn/ldap-sync:dev ./ldap-sync
+docker build -t modomofn/ldap-sync:latest ./ldap-sync
 
 # run against a local stack
 docker run --rm \
