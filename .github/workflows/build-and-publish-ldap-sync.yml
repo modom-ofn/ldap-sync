@@ -90,7 +90,7 @@ jobs:
                 echo "dev_version_tag=v${VERSION}-dev-$SHA" >> $GITHUB_OUTPUT
               fi
               ;;
-            refs/heads/v[0-9]*)
+            refs/heads/v*)
               BRANCH_VERSION="${GITHUB_REF#refs/heads/}"
               if [[ -n "$VERSION" ]]; then
                 echo "version_tag=v$VERSION" >> $GITHUB_OUTPUT
