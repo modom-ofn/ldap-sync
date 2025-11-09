@@ -67,7 +67,7 @@ Add your own scheduler (cron, k8s job, GitHub Actions, etc.) to run the binary a
 
 ```bash
 # build the container
-docker build -t modomofn/ldap-sync:latest ./ldap-sync
+docker build -t modomofn/ldap-sync:v2.0.3 ./ldap-sync
 
 # run against a local stack
 docker run --rm \
@@ -75,7 +75,7 @@ docker run --rm \
   -e LDAP_HOST=ldap://openldap:389 \
   -e LDAP_ADMIN_DN="cn=admin,dc=authportal,dc=local" \
   -e LDAP_ADMIN_PASSWORD=supersecret \
-  modomofn/ldap-sync:dev
+  modomofn/ldap-sync:v2.0.3
 ```
 
 When the run completes you will see logs for any adds/updates. Rerun anytime AuthPortal grants or revokes access.
